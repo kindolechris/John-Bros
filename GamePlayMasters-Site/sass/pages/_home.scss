@@ -11,16 +11,12 @@
     }
 }
 
-.section-features {
-    padding: 20rem 0;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-    url(../img/nat-4.jpg);
-    background-size: cover;
+.section-features { 
     transform: skewY(-7deg);
-    margin-top: -10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50,-50);
 
     & > * {
         transform: skewY(7deg);

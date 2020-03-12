@@ -490,7 +490,7 @@ body {
     transform: scale(0.95); }
 
 .feature-box {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
@@ -895,7 +895,7 @@ body {
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
       height: 95vh; } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
@@ -912,7 +912,14 @@ body {
     height: 3.5rem; }
   .header__text-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__games-list {
+    position: absolute;
+    top: 90%;
+    width: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
@@ -1046,7 +1053,7 @@ body {
   width: 7rem;
   position: fixed;
   top: 6rem;
-  right: 6rem;
+  left: 6rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -1067,7 +1074,7 @@ body {
   border-radius: 50%;
   position: fixed;
   top: 6.5rem;
-  right: 6.5rem;
+  left: 6.5rem;
   background-image: radial-gradient(#69035c, #680168);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -1176,11 +1183,11 @@ body {
       padding: 20rem 0; } }
 
 .section-features {
-  padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(230, 11, 193, 0.8), rgba(104, 1, 104, 0.8)), url(../img/nat-4.jpg);
-  background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -10rem; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, -50); }
   .section-features > * {
     transform: skewY(7deg); }
   @media only screen and (max-width: 56.25em) {
