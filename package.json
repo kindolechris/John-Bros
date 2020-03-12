@@ -1,0 +1,23 @@
+{
+  "name": "john-bros",
+  "version": "1.0.0",
+  "description": "A repository for web sites,graphics,apps etc",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass GamePlayMasters-Site/sass/main.scss GamePlayMasters-Site/css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kindolechris/John-Bros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kindolechris/John-Bros/issues"
+  },
+  "homepage": "https://github.com/kindolechris/John-Bros#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

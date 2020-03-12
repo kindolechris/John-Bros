@@ -1,0 +1,83 @@
+a {
+  outline: 0;
+}
+.admin-side-panel {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $color-primary;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .admin-side-panel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $color-grey-light-1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  
+  .admin-side-panel a:hover {
+    color: $color-deam-white;
+  }
+  
+  .admin-side-panel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main-content {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 250px;
+  }
+  
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary-dark;
+}
+
+.page-link:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem 
+    rgba($color-primary, 0.25);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: 
+#fff;
+text-decoration: none;
+background-color: rgba($color-primary-dark, 0.5);
+}
+
+.custom-select:focus {
+    border-color: $color-primary-dark;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem
+    rgba($color-primary-dark, 0.5);
+}
+
+  @media screen and (max-height: 450px) {
+    .admin-side-panel {padding-top: 15px;}
+    .admin-side-panel a {font-size: 18px;}
+  }
+
+  .signout-dropdown.focus, .signout-dropdown:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem 
+    rgba(#f8f9fa,.25);
+}

@@ -1,0 +1,25 @@
+#snackbar {
+    min-width: 250px;
+    height: 80px;
+    margin-left: -125px;
+    background-color: $color-white;
+    color: $color-success;
+    text-align: center;
+    border-radius: 6px;
+    padding: 18px;
+    position: fixed;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    z-index: 50;
+    left : 10%;
+    top: 4rem;
+    font-size: 17px;
+    font-weight: 550;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+ 

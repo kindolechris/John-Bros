@@ -1,0 +1,145 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 2500;
+  background-color: $color-white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $color-black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav .headingtitle {
+    padding: 8px 8px 8px 32px;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: $color-grey-dark-2;
+    cursor: pointer;
+  }
+
+  .sidenav .headingtitle.first {
+    color: $color-secondary-dark;
+  }
+
+  .sidenav .headingtitle:hover,:active {
+    color: $color-secondary-dark;
+    cursor: pointer;
+  }
+
+  .sidenav .cart-message-status {
+    padding: 8px 8px 8px 32px;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: $color-secondary-dark;
+  }
+
+  
+  .sidenav title {
+    padding: 8px 8px 8px 32px;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: $color-secondary-dark;
+  }
+
+  
+  .sidenav .spancolor {
+    color: $color-secondary-dark;
+  }
+
+  .sidenav .noOrders {
+    color: $color-secondary-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .sidenav .row {
+    margin-bottom: 0;
+    padding: 2px 2px 2px 32px;
+  }
+
+  .sidenav .check-out-hr{
+  border-top: 2px solid $color-secondary-dark;
+  margin-right: 4rem;
+  margin-top: 2rem;
+  }
+
+  .sidenav .check-head-hr{
+    border-top: 2px solid $color-secondary-dark;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    }
+
+  .sidenav .itemname {
+    color: $color-black;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .sidenav .cart-title{
+    padding-top: 2rem;
+    padding-left: 4rem;
+  }
+
+  .sidenav .itemprice {
+    color: $color-grey-dark-2;
+    font-size: 1.5rem;
+  }
+
+  .sidenav .itemtotal{
+    color: $color-black;
+    font-size: 2.0rem;
+    padding: 45px 8px 8px 32px;
+  }
+
+  .sidenav .btn{
+    margin: 30px 8px 8px 32px;
+  }
+
+  .sidenav .itemclear {
+
+    font-size: 25px;
+    //margin-left: 50px;
+    color: $color-grey-dark-2;
+  }
+
+
+  .sidenav a:hover {
+    color: $color-primary-light;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
