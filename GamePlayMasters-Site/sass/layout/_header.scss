@@ -56,5 +56,44 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    
+        @include respond(phone) {
+            display: none;
+        }
+
+        &__picture {
+            background-size: cover;
+            height: 23rem;
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            
+            &--1 {
+                background-image: linear-gradient(to right bottom, $color-for-product1-light,  $color-for-product1-dark), 
+                url(../img/fifa20.jpg);
+            }
+    
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-for-product2-light, $color-for-product2-dark), 
+                url(../img/MortalKombat11.jpg);
+            }
+    
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-for-product3-light, $color-for-product3-dark), 
+                url(../img/ufc.png);
+            }
+            &--4 {
+                background-image: linear-gradient(to right bottom, $color-for-product4-light, $color-for-product4-dark), 
+                url(../img/wrc8.png);
+            }
+        }
     }
+
 }

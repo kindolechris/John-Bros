@@ -923,6 +923,28 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .header__games-list {
+        display: none; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__games-list {
+        display: none; } }
+    .header__games-list__picture {
+      background-size: cover;
+      height: 23rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px; }
+      .header__games-list__picture--1 {
+        background-image: linear-gradient(to right bottom, #5e9ad9, #484686), url(../img/fifa20.jpg); }
+      .header__games-list__picture--2 {
+        background-image: linear-gradient(to right bottom, #8e64ac, #532a77), url(../img/MortalKombat11.jpg); }
+      .header__games-list__picture--3 {
+        background-image: linear-gradient(to right bottom, #e05557, #c92122), url(../img/ufc.png); }
+      .header__games-list__picture--4 {
+        background-image: linear-gradient(to right bottom, #e25daf, #b8207c), url(../img/wrc8.png); }
 
 .sidenav {
   height: 100%;
