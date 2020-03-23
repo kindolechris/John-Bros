@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_projects">
+    <fragment
+        android:id="@+id/nav_projects"
+        android:name="com.genius.odsurveyor.ui.project.ProjectsHomeFragment"
+        android:label="Projects"
+        tools:layout="@layout/projects_home_fragment">
+        <action
+            android:id="@+id/action_projectsHomeFragment2_to_projectAddFragment2"
+            app:destination="@id/projectAddFragment" />
+        <action
+            android:id="@+id/action_nav_projects_to_projectEditFragment2"
+            app:destination="@id/projectEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectAddFragment"
+        android:name="com.genius.odsurveyor.ui.project.ProjectAddFragment"
+        android:label="Add new Project"
+        tools:layout="@layout/project_add_fragment" >
+        <action
+            android:id="@+id/action_projectAddFragment_to_nav_projects"
+            app:destination="@id/nav_projects" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectEditFragment"
+        android:name="com.genius.odsurveyor.ui.project.ProjectEditFragment"
+        android:label="project_edit_fragment"
+        tools:layout="@layout/project_edit_fragment" />
+    <fragment
+        android:id="@+id/nav_planner"
+        android:name="com.genius.odsurveyor.ui.planner.PlannerFragment"
+        android:label="planner_fragment"
+        tools:layout="@layout/planner_fragment" >
+        <action
+            android:id="@+id/action_plannerFragment2_to_questionSetHomeFragment3"
+            app:destination="@id/nav_qs" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_qs"
+        android:name="com.genius.odsurveyor.ui.questionset.QuestionSetHomeFragment"
+        android:label="question_set_home_fragment"
+        tools:layout="@layout/question_set_home_fragment" >
+        <action
+            android:id="@+id/action_questionSetHomeFragment3_to_questionSetAddFragment2"
+            app:destination="@id/questionSetAddFragment" />
+        <action
+            android:id="@+id/action_nav_qs_to_questionSetEditFragment"
+            app:destination="@id/questionSetEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionSetAddFragment"
+        android:name="com.genius.odsurveyor.ui.questionset.QuestionSetAddFragment"
+        android:label="question_set_add_fragment"
+        tools:layout="@layout/question_set_add_fragment" />
+    <fragment
+        android:id="@+id/questionSetEditFragment"
+        android:name="com.genius.odsurveyor.ui.questionset.QuestionSetEditFragment"
+        android:label="question_set_edit_fragment"
+        tools:layout="@layout/question_set_edit_fragment" />
+</navigation>
