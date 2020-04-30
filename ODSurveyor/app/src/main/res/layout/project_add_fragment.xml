@@ -241,7 +241,7 @@
                     app:layout_constraintTop_toTopOf="@+id/lbl_ward" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/txtClientName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -251,27 +251,27 @@
                     app:layout_constraintEnd_toEndOf="@+id/spinner_ward" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/txtAddress1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Address 1"
                     android:inputType="textPersonName"
                     app:layout_constraintBottom_toBottomOf="@+id/lbl_client3"
-                    app:layout_constraintEnd_toEndOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="@+id/txtClientName"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/editText" />
+                    app:layout_constraintStart_toStartOf="@+id/txtClientName" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/txtAddress3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Address 2"
                     android:inputType="textPersonName"
                     app:layout_constraintBottom_toBottomOf="@+id/lbl_client4"
-                    app:layout_constraintEnd_toEndOf="@+id/editText2"
-                    app:layout_constraintStart_toStartOf="@+id/editText" />
+                    app:layout_constraintEnd_toEndOf="@+id/txtAddress1"
+                    app:layout_constraintStart_toStartOf="@+id/txtClientName" />
 
                 <Button
                     android:id="@+id/btn_finishAddProject"
@@ -283,7 +283,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddress3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

@@ -12,6 +12,8 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="open_drawer" />
+    <string name="close_drawer" />
     <string-array name="countries">
         <item>Tanzania</item>
         <item>Kenya</item>

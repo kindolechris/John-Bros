@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539251112374",
+    "firebase_url": "https://odsurvey-4137c.firebaseio.com",
+    "project_id": "odsurvey-4137c",
+    "storage_bucket": "odsurvey-4137c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539251112374:android:2253e44eb2559fcdf56917",
+        "android_client_info": {
+          "package_name": "com.genius.odsurveyor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539251112374-na9udkkjb59cnha7a65jguta3gphfmch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.genius.odsurveyor",
+            "certificate_hash": "58a03e00c405a2fa26e5c4946cbb753ae623bb92"
+          }
+        },
+        {
+          "client_id": "539251112374-fakn6cv8sgrknq7mqlu3me0vc0lvajfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsDhEfTzhXC7QBRhIq45pGhK95gvYo7_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539251112374-fakn6cv8sgrknq7mqlu3me0vc0lvajfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
