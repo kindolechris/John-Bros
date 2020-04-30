@@ -77,6 +77,7 @@ public class ProjectsActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                projectModel.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     ProjectModel user = snapshot.getValue(ProjectModel.class);
                     projectModel.add(user);

@@ -47,13 +47,27 @@
                 <TextView
                     android:id="@+id/txtprojectname"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="18dp"
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:text="Project name"
                     android:textColor="@color/colorTextBlack"
                     android:layout_marginTop="5dp"
                     android:textSize="15sp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:fontFamily="@font/fontawesome">
+                </TextView>
+                <TextView
+                    android:id="@+id/txtPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:textSize="11sp"
+                    android:text="Progress"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorTextBlack"
                     android:fontFamily="@font/fontawesome">
                 </TextView>
                 <TextView

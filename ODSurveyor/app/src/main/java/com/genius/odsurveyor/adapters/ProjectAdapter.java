@@ -43,13 +43,15 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
         TextView txtprojectname;
         TextView txtprojectdate;
         TextView txtprojectprogress;
+        TextView txtPlace;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtprojectname = (TextView)itemView.findViewById(R.id.txtprojectname);
+            txtPlace = (TextView)itemView.findViewById(R.id.txtPlace);
             txtprojectdate = (TextView)itemView.findViewById(R.id.txtprojectdate);
             txtprojectprogress = (TextView)itemView.findViewById(R.id.txtprogress);
-
+            txtprojectname.setSelected(true);
         }
     }
 
@@ -58,6 +60,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
 
         holder.itemView.setTag(projects.get(position));
         holder.txtprojectname.setText(projects.get(position).getProjectName());
+        holder.txtPlace.setText(projects.get(position).getAddress1());
         holder.txtprojectdate.setText(projects.get(position).getDate().substring(0,10));
         holder.txtprojectprogress.setText("Progress :: "+ String.valueOf(projects.get(position).getProgress()) + " % DONE");
 
