@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite"
+    tools:context=".ui.surveyor.AddSurveyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fitsSystemWindows="true"
+            android:elevation="5dp"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/registrationLayout"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingTop="85dp"
+                android:paddingBottom="35dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/projectlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Choose project">
+                    </TextView>
+                    <Spinner
+                        android:id="@+id/spinner_project_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown">
+                    </Spinner>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/stationlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/projectlayout"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Choose station">
+                    </TextView>
+                    <Spinner
+                        android:id="@+id/spinner_station_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown">
+                    </Spinner>
+                </LinearLayout>
+
+
+                <LinearLayout
+                android:id="@+id/cordinatelayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingEnd="10dp"
+                android:gravity="center"
+                android:layout_below="@+id/stationlayout"
+                android:orientation="horizontal"
+                android:paddingStart="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Choose cordinates">
+                </TextView>
+                <Spinner
+                    android:id="@+id/spinner_cordinates_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown">
+                </Spinner>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/questionset"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/cordinatelayout"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Choose question set">
+                    </TextView>
+                    <Spinner
+                        android:id="@+id/spinner_question_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown">
+                    </Spinner>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/RegistrationLoaderketLoader2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:paddingRight="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
