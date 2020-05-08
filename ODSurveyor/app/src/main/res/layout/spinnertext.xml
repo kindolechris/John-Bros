@@ -4,5 +4,6 @@
     android:layout_height="wrap_content"
     android:textSize="14dp"
     android:hint="Board"
+    android:gravity="center"
     android:textColorHint="@color/colorTextBlack"
-    android:textColor="@color/colorWhite" />
+    android:textColor="@color/colorTextBlack" />

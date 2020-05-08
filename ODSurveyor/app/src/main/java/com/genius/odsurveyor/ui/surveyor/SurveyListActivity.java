@@ -11,13 +11,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.genius.odsurveyor.Models.ProjectModel;
 import com.genius.odsurveyor.Models.SurveyModel;
 import com.genius.odsurveyor.R;
-import com.genius.odsurveyor.adapters.ProjectAdapter;
 import com.genius.odsurveyor.adapters.SurveyAdapter;
-import com.genius.odsurveyor.ui.project.AddProjectActivity;
-import com.genius.odsurveyor.ui.project.ProjectsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class SurveyActivity extends AppCompatActivity {
+public class SurveyListActivity extends AppCompatActivity {
     private FloatingActionButton fabAddSurveybtn;
     private RecyclerView surveyrecycler;
     private SurveyAdapter surveyAdapter;
@@ -52,8 +48,8 @@ public class SurveyActivity extends AppCompatActivity {
         fabAddSurveybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(SurveyActivity.this, AddSurveyActivity.class);
-                SurveyActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(SurveyListActivity.this, AddSurveyActivity.class);
+                SurveyListActivity.this.startActivity(myIntent);
             }
         });
 
@@ -82,11 +78,11 @@ public class SurveyActivity extends AppCompatActivity {
                     SurveyModel survey = snapshot.getValue(SurveyModel.class);
                     surveyModel.add(survey);
                 }
-                surveyAdapter = new SurveyAdapter(SurveyActivity.this, surveyModel);
+                surveyAdapter = new SurveyAdapter(SurveyListActivity.this, surveyModel);
                 surveyrecycler.setHasFixedSize(true);
-                surveyrecycler.setLayoutManager(new LinearLayoutManager(SurveyActivity.this));
+                surveyrecycler.setLayoutManager(new LinearLayoutManager(SurveyListActivity.this));
                 surveyrecycler.setAdapter(surveyAdapter);
-                surveyrecycler.setLayoutManager(new LinearLayoutManager(SurveyActivity.this));
+                surveyrecycler.setLayoutManager(new LinearLayoutManager(SurveyListActivity.this));
             }
 
             @Override

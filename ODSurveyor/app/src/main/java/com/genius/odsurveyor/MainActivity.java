@@ -8,10 +8,7 @@ import android.widget.LinearLayout;
 
 import com.genius.odsurveyor.ui.project.ProjectsActivity;
 import com.genius.odsurveyor.ui.questions.QuestionsActivity;
-import com.genius.odsurveyor.ui.surveyor.SurveyActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
+import com.genius.odsurveyor.ui.surveyor.SurveyListActivity;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.navigation.NavController;
@@ -59,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         surveylayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, SurveyActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, SurveyListActivity.class);
                 MainActivity.this.startActivity(myIntent);
             }
         });

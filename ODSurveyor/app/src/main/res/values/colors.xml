@@ -6,5 +6,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorForText">#FFFFFF</color>
     <color name="colorTextBlack">#000000</color>
-    <color name="colorForRipple">#FFFFFF</color>
+    <color name="colorTextGrey">#757575</color>
+    <color name="colorForRipple">#373700B3</color>
 </resources>

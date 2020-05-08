@@ -33,8 +33,10 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-
-
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                layout="@layout/home_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
@@ -121,7 +123,7 @@
                             android:layout_gravity="center"
                             android:tint="@color/colorWhite"
                             android:backgroundTint="@color/colorWhite"
-                            android:background="@drawable/ic_survey">
+                            android:background="@drawable/ic_search">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -193,7 +195,7 @@
                             android:layout_gravity="center"
                             android:tint="@color/colorAccent"
                             android:backgroundTint="@color/colorWhite"
-                            android:background="@drawable/ic_project">
+                            android:background="@drawable/ic_project_work">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"

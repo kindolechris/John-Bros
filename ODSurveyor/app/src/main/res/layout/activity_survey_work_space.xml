@@ -7,7 +7,7 @@
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
     android:background="@color/colorWhite"
-    tools:context=".ui.surveyor.AddSurveyActivity">
+    tools:context=".ui.surveyor.SurveyWorkSpaceActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,37 +47,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@id/txtprojectname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:hint="Project name"
-                    android:textColorHint="@color/colorTextGrey"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="40dp">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtsurveyprojectname"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:maxLength="20"
-                        android:paddingBottom="20dp"
-                        android:fontFamily="@font/fontawesome"
-                        android:maxLines="1"
-                        android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.App.TextInputLayout"
-                        android:textColor="@color/colorTextGrey" />
-                </com.google.android.material.textfield.TextInputLayout>
-
                 <LinearLayout
                     android:id="@+id/projectlayout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:paddingEnd="10dp"
-                    android:layout_below="@+id/txtprojectname"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:paddingStart="10dp">
@@ -87,7 +61,7 @@
                         android:textSize="18dp"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:text="Project"
+                        android:text="Question 1"
                         android:layout_marginRight="45dp">
                     </TextView>
 
@@ -126,73 +100,35 @@
                         android:textSize="18dp"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:text="Station"
+                        android:text="Question 2"
                         android:layout_marginRight="45dp">
                     </TextView>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:paddingEnd="10dp"
-                    android:paddingRight="10dp"
-                    android:background="@drawable/custom_spinner">
-                    <Spinner
-                        android:id="@+id/spinner_station_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
                         android:layout_weight="1"
-                        android:spinnerMode="dropdown">
-                    </Spinner>
-                </LinearLayout>
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/custom_spinner">
+                        <Spinner
+                            android:id="@+id/spinner_station_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:spinnerMode="dropdown">
+                        </Spinner>
+                    </LinearLayout>
                 </LinearLayout>
 
 
                 <LinearLayout
-                android:id="@+id/cordinatelayout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:paddingEnd="10dp"
-                android:gravity="center"
-                android:layout_below="@+id/stationlayout"
-                android:orientation="horizontal"
-                android:paddingStart="10dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="15dp"
-                    android:text="Cordinates"
-                    android:layout_marginRight="15dp">
-                </TextView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="0dp"
-                    android:paddingEnd="10dp"
-                    android:paddingRight="10dp"
-                    android:background="@drawable/custom_spinner">
-
-                    <Spinner
-                        android:id="@+id/spinner_cordinates_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"></Spinner>
-                </LinearLayout>
-            </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/questionset"
+                    android:id="@+id/cordinatelayout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:paddingEnd="10dp"
                     android:gravity="center"
-                    android:layout_below="@+id/cordinatelayout"
+                    android:layout_below="@+id/stationlayout"
                     android:orientation="horizontal"
                     android:paddingStart="10dp">
                     <TextView
@@ -201,34 +137,35 @@
                         android:textSize="18dp"
                         android:gravity="center"
                         android:layout_weight="1"
-                        android:layout_marginEnd="30dp"
-                        android:text="Question"
-                        android:layout_marginRight="30dp">
+                        android:text="Question 3"
+                        android:layout_marginRight="45dp">
                     </TextView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custom_spinner">
-                    <Spinner
-                        android:id="@+id/spinner_question_set"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
                         android:layout_weight="1"
+                        android:layout_marginLeft="0dp"
                         android:paddingEnd="10dp"
                         android:paddingRight="10dp"
-                        android:spinnerMode="dropdown">
-                    </Spinner>
+                        android:background="@drawable/custom_spinner">
+
+                        <Spinner
+                            android:id="@+id/spinner_cordinates_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"></Spinner>
+                    </LinearLayout>
                 </LinearLayout>
-                </LinearLayout>
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/addSurveytBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:layout_below="@+id/questionset"
+                    android:layout_below="@+id/cordinatelayout"
                     android:layout_marginStart="50dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginTop="20dp"

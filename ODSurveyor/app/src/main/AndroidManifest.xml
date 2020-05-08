@@ -14,11 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.surveyor.AddSurveyActivity"></activity>
+        <activity android:name=".ui.questions.QuestionSetActivity"></activity>
+        <activity android:name=".ui.surveyor.SurveyWorkSpaceActivity" />
+        <activity android:name=".ui.respondents.RespondentsActivity" />
+        <activity android:name=".ui.surveyor.AddSurveyActivity" />
         <activity android:name=".ui.project.AddProjectActivity" />
         <activity android:name=".ui.project.ProjectsActivity" />
         <activity android:name=".ui.questions.QuestionsActivity" />
-        <activity android:name=".ui.surveyor.SurveyActivity" />
+        <activity android:name=".ui.surveyor.SurveyListActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashScreenActivity"
