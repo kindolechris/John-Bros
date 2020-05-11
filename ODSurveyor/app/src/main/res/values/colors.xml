@@ -8,4 +8,5 @@
     <color name="colorTextBlack">#000000</color>
     <color name="colorTextGrey">#757575</color>
     <color name="colorForRipple">#373700B3</color>
+    <color name="colorDanger">#ff1744</color>
 </resources>

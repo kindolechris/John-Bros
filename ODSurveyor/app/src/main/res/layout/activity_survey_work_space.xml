@@ -34,7 +34,7 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:id="@+id/registrationLayout"
+                android:id="@+id/cunductSurveyContent"
                 android:layout_width="match_parent"
                 android:layout_below="@+id/toolbar"
                 android:layout_height="match_parent"
@@ -47,11 +47,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/respondentsnamelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Respondent name"
+                    android:textColorHint="@color/colorTextGrey"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="30dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/respondentname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"
+                        android:maxLength="20"
+                        android:paddingBottom="20dp"
+                        android:fontFamily="@font/fontawesome"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.App.TextInputLayout"
+                        android:textColor="@color/colorTextGrey" />
+                </com.google.android.material.textfield.TextInputLayout>
+
                 <LinearLayout
                     android:id="@+id/projectlayout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:paddingEnd="10dp"
+                    android:layout_below="@+id/respondentsnamelayout"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:paddingStart="10dp">
@@ -161,7 +185,7 @@
                 </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/addSurveytBtn"
+                    android:id="@+id/conductSurveytBtn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
@@ -185,7 +209,7 @@
 
 
     <ProgressBar
-        android:id="@+id/RegistrationLoaderketLoader2"
+        android:id="@+id/conductSurveyProgressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

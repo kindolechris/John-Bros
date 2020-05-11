@@ -1,6 +1,7 @@
 package com.genius.odsurveyor.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.genius.odsurveyor.models.SurveyModel;
 import com.genius.odsurveyor.R;
+import com.genius.odsurveyor.ui.respondents.RespondentsActivity;
 
 import java.util.List;
 
@@ -41,7 +43,7 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtsurveyname = (TextView)itemView.findViewById(R.id.txtprojectname);
+            txtsurveyname = (TextView)itemView.findViewById(R.id.txtsurveyname);
             txtsurveydate = (TextView)itemView.findViewById(R.id.txtsurveydate);
             txtsurveyname.setSelected(true);
         }
@@ -51,7 +53,16 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.itemView.setTag(survey.get(position));
         holder.txtsurveyname.setText(survey.get(position).getSurveyname());
-        holder.txtsurveydate.setText(survey.get(position).getDate());
+        holder.txtsurveydate.setText(survey.get(position).getDate().substring(0,10));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(context, RespondentsActivity.class);
+                myIntent.putExtra("surveyname",survey.get(position).getSurveyname());
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     @Override

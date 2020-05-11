@@ -77,7 +77,7 @@ public class AddSurveyActivity extends AppCompatActivity {
                 }
                 addSurveyProgressBar.setVisibility(View.VISIBLE);
                 addSurveyContent.setVisibility(View.INVISIBLE);
-                AddSurvey(surveynameEditext.getText().toString().trim(),stationSpinner.getSelectedItem().toString(),cordinatesSpinner.getSelectedItem().toString(),questionSpinner.getSelectedItem().toString());
+                AddSurvey(surveynameEditext.getText().toString().trim(),projectSpinner.getSelectedItem().toString(),stationSpinner.getSelectedItem().toString(),cordinatesSpinner.getSelectedItem().toString(),questionSpinner.getSelectedItem().toString());
             }
         });
 
@@ -143,11 +143,11 @@ public class AddSurveyActivity extends AppCompatActivity {
         questionSpinner.setAdapter(areasAdapter);
     }
 
-    public void AddSurvey(String surveyname,String station,String cordinate,String question ){
+    public void AddSurvey(String surveyname,String projectname,String station,String cordinate,String question ){
         DatabaseReference reference;
         reference = FirebaseDatabase.getInstance().getReference("Surveys");
         String id = reference.push().getKey();
-        SurveyModel surveyModel = new SurveyModel(id,surveyname,question,cordinate,station,getCurrentTimeStamp());
+        SurveyModel surveyModel = new SurveyModel(id,surveyname,projectname,question,cordinate,station,getCurrentTimeStamp());
         reference.child(id).setValue(surveyModel).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

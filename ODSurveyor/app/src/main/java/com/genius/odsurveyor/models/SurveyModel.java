@@ -3,15 +3,17 @@ package com.genius.odsurveyor.models;
 public class SurveyModel {
     private String id;
     private String surveyname;
+    private String ofProject;
     private String date;
     private String questionSet;
     private String coordinate;
     private String station;
 
 
-    public SurveyModel(String id,String surveyname,String question,String coordinate,String station,String date) {
+    public SurveyModel(String id,String surveyname,String ofProject,String question,String coordinate,String station,String date) {
          this.id = id;
         this.surveyname = surveyname;
+        this.ofProject = ofProject;
         this.questionSet = question;
         this.coordinate = coordinate;
         this.station = station;
@@ -35,6 +37,14 @@ public class SurveyModel {
 
     public void setSurveyname(String surveyname) {
         this.surveyname = surveyname;
+    }
+
+    public String getOfProject() {
+        return ofProject;
+    }
+
+    public void setOfProject(String ofProject) {
+        this.ofProject = ofProject;
     }
 
     public String getId() {
