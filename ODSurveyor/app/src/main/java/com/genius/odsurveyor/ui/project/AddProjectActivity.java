@@ -13,11 +13,10 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.genius.odsurveyor.Models.ProjectModel;
+import com.genius.odsurveyor.models.ProjectModel;
 import com.genius.odsurveyor.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.radiobutton.MaterialRadioButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -85,8 +84,8 @@ public class AddProjectActivity extends AppCompatActivity {
         DatabaseReference reference;
         reference = FirebaseDatabase.getInstance().getReference("Projets");
         String id = reference.push().getKey();
-        ProjectModel bondTransaction = new ProjectModel(id,projectName,"0",getCurrentTimeStamp(),division,state,country,district,ward,clientName,address1,address2);
-        reference.child(id).setValue(bondTransaction).addOnSuccessListener(new OnSuccessListener<Void>() {
+        ProjectModel projectmodel = new ProjectModel(id,projectName,"0",getCurrentTimeStamp(),division,state,country,district,ward,clientName,address1,address2);
+        reference.child(id).setValue(projectmodel).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(getApplicationContext(),"Project added successfully.",Toast.LENGTH_LONG).show();

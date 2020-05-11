@@ -1,4 +1,4 @@
-package com.genius.odsurveyor.Models;
+package com.genius.odsurveyor.models;
 
 public class  RespondentsModel {
     private String respondentname;

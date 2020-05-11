@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genius.odsurveyor.Models.ProjectModel;
+import com.genius.odsurveyor.models.ProjectModel;
 import com.genius.odsurveyor.R;
 
 import java.util.List;

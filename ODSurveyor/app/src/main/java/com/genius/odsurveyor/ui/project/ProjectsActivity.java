@@ -11,11 +11,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.genius.odsurveyor.MainActivity;
-import com.genius.odsurveyor.Models.ProjectModel;
+import com.genius.odsurveyor.models.ProjectModel;
 import com.genius.odsurveyor.R;
 import com.genius.odsurveyor.adapters.ProjectAdapter;
-import com.genius.odsurveyor.ui.questions.QuestionsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

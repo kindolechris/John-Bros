@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.genius.odsurveyor.Models.SurveyModel;
+import com.genius.odsurveyor.models.SurveyModel;
 import com.genius.odsurveyor.R;
 
 import java.util.List;
@@ -26,7 +26,7 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.project_list, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.survey_list, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
 

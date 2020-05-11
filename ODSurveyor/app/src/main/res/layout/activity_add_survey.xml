@@ -34,7 +34,7 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:id="@+id/registrationLayout"
+                android:id="@+id/addSurveyLayout"
                 android:layout_width="match_parent"
                 android:layout_below="@+id/toolbar"
                 android:layout_height="match_parent"
@@ -54,15 +54,15 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="40dp"
                     android:layout_marginBottom="10dp"
-                    android:hint="Project name"
+                    android:hint="Survey name"
                     android:textColorHint="@color/colorTextGrey"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="40dp">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtsurveyprojectname"
+                        android:id="@+id/txtsurveyname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
+                        android:inputType="textCapSentences"
                         android:maxLength="20"
                         android:paddingBottom="20dp"
                         android:fontFamily="@font/fontawesome"
@@ -138,7 +138,7 @@
                     android:background="@drawable/custom_spinner">
                     <Spinner
                         android:id="@+id/spinner_station_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:layout_weight="1"
@@ -179,11 +179,12 @@
 
                     <Spinner
                         android:id="@+id/spinner_cordinates_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:spinnerMode="dropdown"></Spinner>
+                        android:spinnerMode="dropdown">
+                    </Spinner>
                 </LinearLayout>
             </LinearLayout>
                 <LinearLayout
@@ -213,12 +214,10 @@
                     android:background="@drawable/custom_spinner">
                     <Spinner
                         android:id="@+id/spinner_question_set"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:layout_weight="1"
-                        android:paddingEnd="10dp"
-                        android:paddingRight="10dp"
+                        android:gravity="center"
                         android:spinnerMode="dropdown">
                     </Spinner>
                 </LinearLayout>
@@ -248,7 +247,7 @@
 
 
     <ProgressBar
-        android:id="@+id/RegistrationLoaderketLoader2"
+        android:id="@+id/add_survey_loader"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

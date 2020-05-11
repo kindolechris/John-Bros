@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.genius.odsurveyor.Models.SurveyModel;
+import com.genius.odsurveyor.models.SurveyModel;
 import com.genius.odsurveyor.R;
 import com.genius.odsurveyor.adapters.SurveyAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

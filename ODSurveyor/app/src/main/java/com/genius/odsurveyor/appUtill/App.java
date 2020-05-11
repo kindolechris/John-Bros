@@ -1,4 +1,4 @@
-package com.genius.odsurveyor.AppUtill;
+package com.genius.odsurveyor.appUtill;
 
 import android.app.Application;
 
